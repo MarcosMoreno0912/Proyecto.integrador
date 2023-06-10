@@ -1,0 +1,78 @@
+
+.container{
+	font-size: 13px;
+	display: flex;
+	flex-wrap: nowrap;
+	width: 350px;
+	height: 500px;
+	justify-content: space-around;
+	margin: 1.5em;
+	background-color: #559C75;
+	opacity: 0.95;
+	border: 4px double #481010;
+	border-radius: 15px;
+	flex-direction: column;
+	padding: 0.3em;
+	box-shadow: 10px 10px 18px -6px rgba(0,0,0,0.75);
+	cursor: grab;
+	align-items: stretch;
+    transition: transform 0.3s;
+}
+
+.container:hover{
+	transform: scale(1.07);
+}
+
+.container .closeButton{
+	width: fit-content;
+	height: fit-content;
+	box-shadow: 3px 4px 6px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:41px;
+	display: flex;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px 8px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #810e05;
+}
+
+.closeButton:hover{
+	background-color: #f24437;
+	background: linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+}
+
+.closeButton:active{
+	position: relative;
+	top: 5px;
+}
+
+.container button{
+	display: flex;
+	margin-left: 8px;
+	background-color: lightslategray;
+	border-radius: 40px;
+	width: fit-content;
+	height: fit-content;
+}
+
+.container h2{
+	color: #326;
+	font-family: monospace;
+	font-size: 25px;
+	font-weight: 580;
+	text-align:center;
+	margin:8px;
+}
+
+img{
+	
+	width: 300px;
+	height: 250px;
+	border-radius: 5%;
+	margin-left: 25px;
+}

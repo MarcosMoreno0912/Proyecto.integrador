@@ -1,0 +1,12 @@
+  
+ .cardContainer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 10px;
+	width: 1800px;
+	height: auto;
+	margin: 0 auto;
+ }
+
+ 

@@ -1,0 +1,47 @@
+
+.barSearch {
+   display: flex;
+   padding: 0.5em;
+   justify-content: normal;
+   align-items: center;
+   align-content: space-around;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   opacity: 0.8;
+   border-radius: 10px;
+   height: 30px;
+   flex-wrap: wrap;
+}
+
+ .searchInput {
+   display: flex;
+   flex-wrap: wrap;
+   align-content: center;
+    width: 400px;
+    height: 30px;
+    border-radius: 10px 0px 0px 10px;
+    background-color: white;
+    padding-top: 30px;
+}
+
+ .searchButton {
+   display: flex; 
+    width: 70px;
+    height: 33px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: gray;
+    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    font-weight: 650;
+}
+
+.randomButton {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  background-color: darkolivegreen;
+  height: 33px;
+  border-radius: 10px;
+  font-weight: 650;
+}

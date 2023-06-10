@@ -1,0 +1,57 @@
+ .navSearch {
+   display: flex;
+   padding: 0.5em;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   background-color: #481010;
+   opacity: 0.9;
+   border-radius: 10px;
+   height: 100px;
+
+}
+
+ .searchInput {
+    width: 650px;
+    height: 28px;
+    justify-items: center;
+
+    border-radius: 10px 0px 0px 10px;
+    background-color: white;
+    padding-top: 30px;
+}
+
+ .searchButton {
+    font-size: bold; 
+    width: 70px;
+    height: 30px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: gray;
+    padding-top: 35px;
+    align-items:flex-end;
+    align-content: flex-start;
+    text-align: center;
+}
+
+.routesButtons {
+   display: flex;
+   position: relative;
+   flex-wrap: wrap;
+   align-content: center;
+   background-color: white;
+   border-radius: 8px;
+   width: 80px;
+   height: 33px;
+   margin-left: 10px;
+   padding-left: 5px;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   font-weight: 650;
+
+}
+
+ button.style.routesButtons{
+   background-color: green;
+}
