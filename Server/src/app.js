@@ -1,9 +1,12 @@
 const express = require('express');
 const router = require('./routes/index.js');
+const app = express();
 const server = express();
 const cors = require('cors');
 
-server.use(cors());
+app.use(cors({
+   origin: 'http://localhost:3000'
+}));
 
 server.use((req, res, next) => {
    res.header('Access-Control-Allow-Origin', '*');

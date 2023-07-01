@@ -3,7 +3,7 @@ import { useState } from 'react';
 import style from './Form.module.css';
 import { validation } from '../../Validation.js'
 import { useNavigate } from 'react-router-dom'
-import LogRM from '../Assets/LogRM.jpg'
+import login_circle from '../Assets/login_circle.gif'
 
  const Form = ({ login }) => {
 	const [userData, setUserData] = useState({
@@ -42,7 +42,7 @@ import LogRM from '../Assets/LogRM.jpg'
 
 	return(
 		<form className={style.formLogin}>
-		 <img src={LogRM} alt="Bienvenido" />
+		 <img src={login_circle} alt="Bienvenido" />
 		  <label>
 		  	Email:
 		  	<input type="text" name="email" value={userData.email} onChange={handleChange} placeholder="Email..."/>

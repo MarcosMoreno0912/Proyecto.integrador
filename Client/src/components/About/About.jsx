@@ -1,6 +1,7 @@
 import React from 'react'
 import Aboutimage from '../Assets/Aboutimage.jpg'
 import style from './About.module.css'
+import { Link } from 'react-router-dom';
 
 const About = () => {
 	return(
@@ -11,8 +12,9 @@ const About = () => {
          <p>Espero que disfrutes interactuar con mi página.</p>
     
          <div className={style.info}>
-            <h1>Sobre Mí</h1>
-
+            <h1>
+               <Link to="/bio">Sobre Mí</Link>
+            </h1>
          </div>
 
     </div>

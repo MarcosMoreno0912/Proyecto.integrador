@@ -4,7 +4,7 @@ import style from './Favourites.module.css'
 import { filterCards, orderCards, removeFav } from '../../redux/actions.js'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
-
+import { v4 as uuidv4 } from 'uuid';
 
 const Favourites = ({myFavourites, removeFav}) => {
 	const [aux, setAux] = useState(false)
@@ -12,8 +12,8 @@ const Favourites = ({myFavourites, removeFav}) => {
 	const dispatch = useDispatch();
 
 	const handleOrder = (event) => {
-		dispatch(orderCards(event.target.value))
 		setAux(!aux)
+		dispatch(orderCards(event.target.value))
 	}
 
 	const handleFilter = (event) => {
@@ -38,11 +38,11 @@ const Favourites = ({myFavourites, removeFav}) => {
 			</select>
 
 		  {myFavourites && myFavourites.length > 0 ? ( 
-			myFavourites.map((fav) => fav &&( 
+			myFavourites.map((character) => character &&( 
 					<Card
-					key={fav.id}
-					character={fav}
-					onClose={() => handleOnClose(fav.id)}
+					key={uuidv4()}
+					character={character}
+					onClose={handleOnClose}
 					/>
 				))
 			  ) : (

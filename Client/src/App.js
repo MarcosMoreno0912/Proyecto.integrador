@@ -10,12 +10,13 @@ import ErrorPage from './components/Error/Error.jsx'
 import Form from './components/Form/Form.jsx'
 import { useLocation , useNavigate } from 'react-router-dom'
 import style from './App.module.css'
+import { Biography } from './components/Bio/Biography.jsx';
 
 
 export default function App() {
 
    const [characters, setCharacters] = useState([])
-   const [access, setAccess] = useState(false)
+   const [access, setAccess] = useState(true)
 //   const EMAIL = 'moreno83marcos@gmail.com'
 //   const PASSWORD = 'passRandM23'
    const navigate = useNavigate();
@@ -27,7 +28,7 @@ export default function App() {
         const { data } = await axios.get(URL + `?email=${email}&password=${password}`)
             const { access } = data;
             setAccess(data);
-            access && navigate('/home');
+            access.access && navigate('/home');
       } catch (error){
          console.error(error)
       }   
@@ -81,15 +82,16 @@ export default function App() {
     const location = useLocation();
    
    return (
-      <div className= {style.App} style= {{padding: "25px"}} > 
+      <div className= {style.App}  > 
        {location.pathname !== '/' && <NavBar onSearch={onSearch} onRandom={onRandom}/>}
         <Routes>
             <Route path="/home" element={<Cards characters={characters} onClose={onClose} />} />
             <Route path="/about" element={<About />} />
+            <Route path="/bio" element={<Biography />} />
             <Route path="/detail/:id" element={<Detail />} className={style.detail} />
             <Route path="/favourites" element={<Favourites onClose={onClose} />}/>
             <Route path= "/*" element={<ErrorPage />} />
-            <Route exact path="/" element={<Form login={login}/>} />
+            <Route exact path="/" element={<Form login={login}/>} className={style.formImage}/>
          </Routes>   
 
       </div>

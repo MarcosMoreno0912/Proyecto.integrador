@@ -1,0 +1,14 @@
+.bio{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	background-color: slategray;
+
+}
+
+.bio a{
+	display: flex;
+	height: 40px;
+	weight: 40px;
+}

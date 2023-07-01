@@ -11,12 +11,16 @@ import { useState, useEffect } from 'react'
    const [isFav, setFavs] = useState(false);
 
    const handleFavorite = () => {
-    isFav ? removeFav(id) : addFav(id);
-    setFavs(!isFav);
+      if(window.location.pathname === "/home"){
+         isFav ? removeFav(id) : addFav(id);
+         setFavs(!isFav);
+      }
    }
 
    const handleOnClose = () => {
-      onClose(id);
+      if(onClose){ 
+         onClose(id);
+      }
    }
 
    useEffect(() => {
@@ -32,13 +36,15 @@ import { useState, useEffect } from 'react'
    return (
       <div className= {style.container}>
          <button onClick={handleOnClose}  className={style.closeButton}>X</button>
-         {
+         {window.location.pathname === "/home" ? (
             isFav ? (
                <button onClick={handleFavorite} className={style.favBtn}>❤️</button>
             ) : (
                <button onClick={handleFavorite} className={style.favBtn}>🤍</button>
             )
-         }
+         ) : (
+            <button className={style.favBtnDisabled}>❤️</button>
+         )}
 
          <img src={image} alt={name} />
            <Link to={`/detail/${id}`} >
@@ -53,8 +59,8 @@ import { useState, useEffect } from 'react'
   
    const mapDispatchToProps = (dispatch) => {
       return{
-         addFav: (id, character) => dispatch(addFav(id, character)),
          removeFav: (id) => dispatch(removeFav(id)),
+         addFav: (id) => dispatch(addFav(id)),
       }
    }
 
